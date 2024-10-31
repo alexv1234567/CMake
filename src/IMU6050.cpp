@@ -18,9 +18,10 @@ IMU6050::IMU6050(int i2c_address) : i2c_address(i2c_address), i2c_fd(-1), accel_
 
 bool IMU6050::initialize() {
 #ifdef __linux__
-    i2c_fd = open("/dev/i2c-1", O_RDWR);
+    // Open I2C bus 7
+    i2c_fd = open("/dev/i2c-7", O_RDWR);
     if (i2c_fd < 0) {
-        std::cerr << "Failed to open I2C bus" << std::endl;
+        std::cerr << "Failed to open I2C bus 7" << std::endl;
         return false;
     }
 

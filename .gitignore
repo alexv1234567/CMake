@@ -1,0 +1,11 @@
+# Ignore build directory
+/build/
+
+# Ignore specific build artifacts
+*.o
+*.out
+*.exe
+
+# Ignore other environment or temporary files
+.DS_Store
+*.log
